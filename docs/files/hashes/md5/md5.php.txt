@@ -1,0 +1,47 @@
+<?php
+/**
+ * Chronolabs REST Checksums/Hashes Selector API
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Chronolabs Cooperative http://labs.coop
+ * @license         GNU GPL 2 (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+ * @package         checksums
+ * @since           1.0.2
+ * @author          Simon Roberts <meshy@labs.coop>
+ * @version         $Id: functions.php 1000 2013-06-07 01:20:22Z mynamesnot $
+ * @subpackage		md5
+ * @description		Checksums/Hashes API Service REST
+ * @link			https://screening.labs.coop Screening API Service Operates from this URL
+ * @category		cryptographic
+ * @category		md5
+ * @filesource
+ */
+
+if (!class_exists('Md5HashAPI')) {
+
+	/**
+	 * Class model for MD5 Checksums
+	 * 
+	 * @abstract
+	 * @author Simon Roberts
+	 */
+	class Md5HashAPI extends hashAPI {
+		
+		/**
+		 * Loads the function variables into the parent extended class
+		 */
+		function __construct() {
+			parent::setInfo(array('function'=>'md5', 'author'=>'Simon Roberts', 'description'=>'MD5 Checksum'));
+			parent::setVariables(array('number'=>0, 'defines'=>array()));
+		}
+
+	}
+}
+
+?>
